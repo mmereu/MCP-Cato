@@ -1,10 +1,25 @@
 # MCP-Cato
 
-**Cato Networks SASE/SD-WAN management webapp powered by Model Context Protocol (MCP) and AI agents.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![MCP Tools](https://img.shields.io/badge/MCP%20Tools-63-CCFF00?style=flat&labelColor=0a0a0a)](https://modelcontextprotocol.io/)
+[![Cato Networks](https://img.shields.io/badge/Cato%20Networks-SASE-4A90D9?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyeiIvPjwvc3ZnPg==)](https://www.catonetworks.com/)
 
-A full-stack web application that integrates with Cato Networks' API through both GraphQL and MCP (Model Context Protocol), providing a unified management interface with 63 operational tools and AI-powered agent orchestration.
+> **Cato Networks SASE/SD-WAN management webapp powered by Model Context Protocol (MCP) and AI agents.**
+
+A full-stack web application that integrates with Cato Networks' API through both GraphQL and MCP (Model Context Protocol), providing a unified management interface with **63 operational tools** and AI-powered agent orchestration.
 
 ![MCP Tools Dashboard](docs/screenshot-mcp-tools.png)
+
+### Why MCP-Cato?
+
+- **Single pane of glass** for Cato Networks operations — no more switching between tabs
+- **63 MCP tools** with Italian UI, smart result rendering, and CSV export
+- **AI agent orchestration** — 23 specialized agents for security, networking, and operations
+- **Auto-pagination** — breaks through API limits to return complete datasets
+- **Zero-build frontend** — 180KB inline HTML, deploys in seconds
+- **Docker-ready** — `docker compose up` and you're running
 
 ---
 
@@ -187,6 +202,22 @@ La directory `agents/` contiene configurazioni per l'orchestrazione di agenti AI
 - **`agents/cato/`** — 5 agenti specifici Cato: Security Analyst, Network Engineer, Data Analyst, Incident Responder, Operator
 
 ---
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Give it a Star!
+
+If you find this project useful, please consider giving it a star on GitHub. It helps others discover the project and motivates further development.
+
+[![Star this repo](https://img.shields.io/github/stars/mmereu/MCP-Cato?style=social)](https://github.com/mmereu/MCP-Cato)
 
 ## License
 
