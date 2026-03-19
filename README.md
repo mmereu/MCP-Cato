@@ -4,6 +4,8 @@
 
 A full-stack web application that integrates with Cato Networks' API through both GraphQL and MCP (Model Context Protocol), providing a unified management interface with 63 operational tools and AI-powered agent orchestration.
 
+![MCP Tools Dashboard](docs/screenshot-mcp-tools.png)
+
 ---
 
 ## English
