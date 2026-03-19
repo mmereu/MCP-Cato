@@ -1,0 +1,9 @@
+# 🔒 CATO SECURITY ANALYST
+version: 1
+agent:
+  extend: ../cato-swarm.yaml
+  name: cato-security-analyst
+  system_prompt_path: ../prompts/cato-security-analyst.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

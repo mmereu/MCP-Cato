@@ -1,0 +1,9 @@
+# 🌐 CATO NETWORK ENGINEER
+version: 1
+agent:
+  extend: ../cato-swarm.yaml
+  name: cato-network-engineer
+  system_prompt_path: ../prompts/cato-network-engineer.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

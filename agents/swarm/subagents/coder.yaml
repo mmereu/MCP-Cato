@@ -1,0 +1,9 @@
+# 👨‍💻 CODER - Subagente per Sviluppo Codice
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: coder
+  system_prompt_path: ../prompts/coder.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

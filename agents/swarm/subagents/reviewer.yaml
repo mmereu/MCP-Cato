@@ -1,0 +1,9 @@
+# 👁️ REVIEWER - Subagente per Code Review
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: reviewer
+  system_prompt_path: ../prompts/reviewer.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

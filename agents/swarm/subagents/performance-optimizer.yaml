@@ -1,0 +1,9 @@
+# ⚡ PERFORMANCE OPTIMIZER - Web Vitals & Speed
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: performance-optimizer
+  system_prompt_path: ../prompts/performance-optimizer.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

@@ -1,0 +1,9 @@
+# 📊 CATO DATA ANALYST
+version: 1
+agent:
+  extend: ../cato-swarm.yaml
+  name: cato-data-analyst
+  system_prompt_path: ../prompts/cato-data-analyst.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

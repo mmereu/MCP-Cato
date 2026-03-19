@@ -1,0 +1,9 @@
+# ⚛️ REACT SPECIALIST - Esperto React Moderno
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: react-specialist
+  system_prompt_path: ../prompts/react-specialist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

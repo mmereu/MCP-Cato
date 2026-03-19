@@ -1,0 +1,44 @@
+# ============================================================
+# 🤖 CATO SWARM - Agenti Specializzati per Cato Networks
+# ============================================================
+
+version: 1
+agent:
+  name: cato-swarm-master
+  system_prompt_path: ./prompts/cato-master.md
+  tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"
+    - "kimi_cli.tools.ask_user:AskUserQuestion"
+    - "kimi_cli.tools.todo:SetTodoList"
+    - "kimi_cli.tools.shell:Shell"
+    - "kimi_cli.tools.file:ReadFile"
+    - "kimi_cli.tools.file:WriteFile"
+    - "kimi_cli.tools.file:StrReplaceFile"
+    - "kimi_cli.tools.web:SearchWeb"
+    - "kimi_cli.tools.web:FetchURL"
+  subagents:
+    # 🔒 Security Analyst
+    cato-security-analyst:
+      path: ./subagents/cato-security-analyst.yaml
+      description: "Analizza minacce, security events, indicatori di compromissione. Usalo per investigazioni security e threat hunting."
+    
+    # 🌐 Network Engineer
+    cato-network-engineer:
+      path: ./subagents/cato-network-engineer.yaml
+      description: "Analizza connectivity, siti, WAN links, performance di rete. Usalo per troubleshooting network e ottimizzazione."
+    
+    # 📊 Data Analyst
+    cato-data-analyst:
+      path: ./subagents/cato-data-analyst.yaml
+      description: "Genera report, analizza trend, crea dashboard. Usalo per reporting e analisi storiche."
+    
+    # 🚨 Incident Responder
+    cato-incident-responder:
+      path: ./subagents/cato-incident-responder.yaml
+      description: "Gestisce incidenti, esegue playbook, coordina risposta. Usalo per XOps stories e incident response."
+    
+    # ⚙️ Cato Operator
+    cato-operator:
+      path: ./subagents/cato-operator.yaml
+      description: "Esegue operazioni su Cato MCP, gestisce tool e API. Usalo per azioni concrete sul sistema Cato."

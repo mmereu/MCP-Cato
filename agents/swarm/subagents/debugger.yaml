@@ -1,0 +1,9 @@
+# 🐛 DEBUGGER - Subagente per Debugging
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: debugger
+  system_prompt_path: ../prompts/debugger.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

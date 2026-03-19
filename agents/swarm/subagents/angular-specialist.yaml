@@ -1,0 +1,9 @@
+# 🅰️ ANGULAR SPECIALIST - Esperto Angular & TypeScript
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: angular-specialist
+  system_prompt_path: ../prompts/angular-specialist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

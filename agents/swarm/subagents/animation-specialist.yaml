@@ -1,0 +1,9 @@
+# ✨ ANIMATION SPECIALIST - Animazioni Web
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: animation-specialist
+  system_prompt_path: ../prompts/animation-specialist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

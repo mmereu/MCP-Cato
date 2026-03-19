@@ -1,0 +1,9 @@
+# ♿ ACCESSIBILITY SPECIALIST - A11y & Inclusività
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: accessibility-specialist
+  system_prompt_path: ../prompts/accessibility-specialist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

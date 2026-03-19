@@ -1,0 +1,9 @@
+# 🔒 SECURITY - Subagente per Sicurezza
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: security
+  system_prompt_path: ../prompts/security.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

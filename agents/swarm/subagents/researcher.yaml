@@ -1,0 +1,9 @@
+# 🔍 RESEARCHER - Subagente per Ricerca
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: researcher
+  system_prompt_path: ../prompts/researcher.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

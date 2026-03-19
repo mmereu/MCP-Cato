@@ -1,0 +1,99 @@
+# ============================================================
+# 🤖 AGENT SWARM - Configurazione Universale
+# Un sistema multi-agente per qualsiasi progetto software
+# ============================================================
+# USAGE: kimi --agent-file agents/swarm/agent.yaml
+# ============================================================
+
+version: 1
+agent:
+  name: swarm-master
+  system_prompt_path: ./prompts/master.md
+  tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"
+    - "kimi_cli.tools.ask_user:AskUserQuestion"
+    - "kimi_cli.tools.todo:SetTodoList"
+    - "kimi_cli.tools.shell:Shell"
+    - "kimi_cli.tools.file:ReadFile"
+    - "kimi_cli.tools.file:ReadMediaFile"
+    - "kimi_cli.tools.file:Glob"
+    - "kimi_cli.tools.file:Grep"
+    - "kimi_cli.tools.file:WriteFile"
+    - "kimi_cli.tools.file:StrReplaceFile"
+    - "kimi_cli.tools.web:SearchWeb"
+    - "kimi_cli.tools.web:FetchURL"
+  subagents:
+    # 🎨 Subagenti Specializzati
+    coder:
+      path: ./subagents/coder.yaml
+      description: "Scrive, modifica e refactoring del codice. Usalo per implementare features, fixare bug, ottimizzare performance."
+    
+    researcher:
+      path: ./subagents/researcher.yaml
+      description: "Cerca informazioni su web, documentazione, API, librerie. Usalo quando serve conoscenza esterna o aggiornata."
+    
+    reviewer:
+      path: ./subagents/reviewer.yaml
+      description: "Code review, analisi qualità, best practices, sicurezza. Usalo prima di finalizzare modifiche importanti."
+    
+    debugger:
+      path: ./subagents/debugger.yaml
+      description: "Debugging, analisi errori, troubleshooting. Usalo quando c'è un bug da risolvere o test da fixare."
+    
+    architect:
+      path: ./subagents/architect.yaml
+      description: "Progettazione architettura, design patterns, struttura progetto. Usalo per decisioni architetturali importanti."
+    
+    tester:
+      path: ./subagents/tester.yaml
+      description: "Scrive test unitari, integration tests, e2e tests. Usalo per aumentare coverage o testare nuove features."
+    
+    docs:
+      path: ./subagents/docs.yaml
+      description: "Scrive documentazione, README, commenti, docstring. Usalo per documentare codice o creare guide."
+    
+    security:
+      path: ./subagents/security.yaml
+      description: "Security audit, vulnerabilità, hardening. Usalo per controllare sicurezza codice e configurazioni."
+    
+    # ⚛️ Frontend Specialists
+    react-specialist:
+      path: ./subagents/react-specialist.yaml
+      description: "Esperto React 18+, Hooks, Server Components, Next.js. Usalo per componenti React, state management, performance React."
+    
+    vue-specialist:
+      path: ./subagents/vue-specialist.yaml
+      description: "Esperto Vue 3, Composition API, Pinia, Nuxt 3. Usalo per applicazioni Vue, composables, reattività."
+    
+    angular-specialist:
+      path: ./subagents/angular-specialist.yaml
+      description: "Esperto Angular 17+, Standalone Components, Signals, RxJS. Usalo per enterprise Angular, architettura, NgRx."
+    
+    css-stylist:
+      path: ./subagents/css-stylist.yaml
+      description: "Esperto CSS, Tailwind, Animations, Design Tokens. Usalo per styling, temi, architettura CSS, animazioni CSS."
+    
+    ui-component-designer:
+      path: ./subagents/ui-component-designer.yaml
+      description: "Esperto Design System, Component API, Headless UI. Usalo per componenti riutilizzabili, librerie UI, Storybook."
+    
+    accessibility-specialist:
+      path: ./subagents/accessibility-specialist.yaml
+      description: "Esperto WCAG, ARIA, Screen Readers, A11y Testing. Usalo per audit accessibilità, fix a11y, semantic HTML."
+    
+    performance-optimizer:
+      path: ./subagents/performance-optimizer.yaml
+      description: "Esperto Web Vitals, Bundle Optimization, Lazy Loading. Usalo per ottimizzare LCP, INP, CLS, code splitting."
+    
+    form-wizard:
+      path: ./subagents/form-wizard.yaml
+      description: "Esperto Form Complessi, Validazione, React Hook Form. Usalo per form multi-step, validazione Zod, dynamic forms."
+    
+    animation-specialist:
+      path: ./subagents/animation-specialist.yaml
+      description: "Esperto Framer Motion, GSAP, Micro-interactions. Usalo per animazioni performanti, page transitions, scroll effects."
+    
+    responsive-layout-expert:
+      path: ./subagents/responsive-layout-expert.yaml
+      description: "Esperto Responsive Design, CSS Grid, Mobile-First. Usalo per layout adattivi, container queries, breakpoint strategy."

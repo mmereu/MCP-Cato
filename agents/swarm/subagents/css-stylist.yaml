@@ -1,0 +1,9 @@
+# 🎨 CSS STYLIST - Esperto CSS, Animations & Design
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: css-stylist
+  system_prompt_path: ../prompts/css-stylist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

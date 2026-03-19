@@ -1,0 +1,9 @@
+# ⚙️ CATO OPERATOR
+version: 1
+agent:
+  extend: ../cato-swarm.yaml
+  name: cato-operator
+  system_prompt_path: ../prompts/cato-operator.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

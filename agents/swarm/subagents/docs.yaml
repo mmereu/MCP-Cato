@@ -1,0 +1,9 @@
+# 📝 DOCS - Subagente per Documentazione
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: docs
+  system_prompt_path: ../prompts/docs.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

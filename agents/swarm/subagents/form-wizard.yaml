@@ -1,0 +1,9 @@
+# 📋 FORM WIZARD - Forms Complessi & Validazione
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: form-wizard
+  system_prompt_path: ../prompts/form-wizard.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

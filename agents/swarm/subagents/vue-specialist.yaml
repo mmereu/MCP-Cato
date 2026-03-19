@@ -1,0 +1,9 @@
+# 🟢 VUE SPECIALIST - Esperto Vue 3 & Composition API
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: vue-specialist
+  system_prompt_path: ../prompts/vue-specialist.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"

@@ -1,0 +1,9 @@
+# 🧪 TESTER - Subagente per Testing
+version: 1
+agent:
+  extend: ../agent.yaml
+  name: tester
+  system_prompt_path: ../prompts/tester.md
+  exclude_tools:
+    - "kimi_cli.tools.multiagent:Task"
+    - "kimi_cli.tools.multiagent:CreateSubagent"
